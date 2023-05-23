@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Image Slider </title>
+	<style>
+		*{
+		  background-image:url("https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg");
+		  background-repeat:no-repeat;
+		  background-size:cover;
+		  box-sizing:border-box;
+		  color:black;
+		}
+
+		 .main{
+             align-items:center;
+             justify-content:center;
+             display:flex;
+             width:100%;
+             height:100vh;
+
+
+		 }
+
+		 form{
+		 	border:4px solid black;
+		 	width:500px;
+		 	height:100px;
+            margin:10px 0;
+
+		 }
+
+		 form label{
+		 	width:100%;
+		 	font-size:20px;
+
+		 }
+
+		 form input{
+		 	padding:6px 0;
+		 	width:100%;
+		 }
+
+		 form select{
+		 	width:100%;
+		 	padding:6px 0;
+		 	
+		 }
+
+		 .ta{
+		 	width:100%;
+		 }
+
+		 .sumbit{
+		 	height:60px;
+		 }
+	</style>
+</head>
+<body>
+	<div class="main">
+  <form>
+  	 <label for="Name">Name:</label><br>
+  	 <input type="text" id="name" name="Name" placeholder="Name"><br>
+  	 <!--  -->
+  	 <label for="Email">Email:</label><br>
+  	 <input type="text" name="Email" id="email" placeholder="eg@gmail.com"><br>
+  	 <!--  -->
+  	 <label for="Gender" id="gender">Gender:</label><br>
+  	 <select>
+  	 	<option value="male">Male</option>
+  	 	<option value="female">Female</option>
+  	 	<option value="others">Others</option>
+  	 </select><br>
+  	 <!--  -->
+  	 <label for="date"> Date of Birth</label><br>
+  	 <input type="date" name="Dateofbirth" id="dob"><br>
+  	 <!--  -->
+  	 <label for="Address">Address </label><br>
+  	 <textarea class="ta"></textarea><br>
+  	 <!--  -->
+  	 <input type="button" value="SUBMIT" class="sumbit">
+
+
+  </form>
+  </div>
+</body>
+</html>
