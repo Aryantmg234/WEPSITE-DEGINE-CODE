@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Slider</title>
+
+    <!-- Style for css -->
+                                                                       <style>
+                                                                        *{
+                                                                            color:white;
+                                                                    
+                                                                        }
+                                                                        ul{
+                                                                            display:flex;
+                                                                            list-style:none;
+                                                                            margin:0;
+                                                                            padding:0;
+                                                                        }
+                                                                         
+                                                                        ul li{
+                                                                            flex:1;
+                                                                            text-align:center;
+                                                                            color:azure;
+                                                                            background-color:blueviolet;
+                                                                            padding:10px;
+                                                                            
+                                                                        }
+                                                                        ul li a{
+                                                                            text-decoration-line:none;
+                                                                        }
+
+                                                                        ul li:hover{
+                                                                            background-color:brown;
+                                                                        }
+
+                                                                        #slider{
+                                                                            width:100%;
+                                                                            height:500px;
+                                                                            position:relative;
+                                                                            overflow:hidden;
+                                                                        }
+
+                                                                        .imgslider{
+                                                                            width:100%;
+                                                                            height:100%;
+                                                                            position:absolute;
+                                                                            display:block;
+                                                                        }
+
+                                                                
+
+                                                                        .prev-button, .next-button{
+                                                                            width:50px;
+                                                                            height:50px;
+                                                                            background-color: gold;
+                                                                            position:absolute;
+                                                                            top: 45%;
+                                                                            text-align:center;
+                                                                            cursor:pointer;
+                                                                            border:none;
+                                                                            outline:none;
+                                                                            border-radius:15px;
+                                                                            font-size:15px;
+                                                                            font-weight:bold;
+                                                                        }
+                                                                        .prev-button{
+                                                                            left:20px;
+                                                                        }
+
+                                                                        .next-button{
+                                                                            right:20px;
+                                                                        }
+
+                                                                        </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">About Me</a></li>
+            <li> <a href="#">My team</a></li>
+            <li> <a href="#">My projects</a></li>
+            <li> <a href="#">My biography</a></li>
+        </ul>
+    </nav>
+
+    <!-- For Picture -->
+    <div class="picture" id="slider">
+        <img src="aryan.jpg" alt="sasuke" class="imgslider">
+        <img src="kakashi.jpg" alt="kakashi" class="imgslider">
+        <img src="narusasu.jpg" alt="narusasu" class="imgslider">
+
+        <button class="prev-button" id="leftbutton">&lt;</button>
+        <button class="next-button" id="rightbutton">&gt;</button>
+    </div>
+
+    <!-- For JavaScript -->
+    <script>
+        const images =document.querySelectorAll('.picture');
+        const prevButton =document.querySelectorAll('.prev-button');
+        const nextButton =document.querySelectorAll('.next-button');
+
+        let currentIndex =0;
+
+        function showPrevImage(){
+            currentIndex--;
+        
+            if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      }
+
+      updateImage();
+        }
+
+        function showNextImage(){
+            currentIndex++;
+
+            if(currentIndex >=images.length){
+                currentIndex = 0;
+            }
+
+            updateImage();
+        }
+
+        function updateImage(){
+            images.forEach(image =>{
+                image.style.display= 'none';
+            });
+
+            images[currentIndex].style.display ='block';
+        }
+
+        prevButton.addEventListener('click', showPrevImage);
+        nextButton.addEventListener('click', showNextImage);
+
+        updateImage();
+    </script>
+</body>
+</html>
