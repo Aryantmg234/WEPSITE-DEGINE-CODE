@@ -1,0 +1,199 @@
+
+/* For Nav bar */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    right:0;
+    z-index: 1000;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    background:transparent;
+    padding:28px 12%;
+    transition:all .50s ease;
+}
+.logo{
+    display:flex;
+    align-items:center;
+}
+a{
+    text-decoration: none;
+}
+.logo span{
+    color:var(--main-color);
+    font-size: 28px;
+    margin-right:3px; 
+}
+    
+
+.logo span{
+    color:var(--text-color);
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+
+.navbar{
+    list-style: none;
+    display:flex;
+
+}
+
+.navbar a{
+    text-decoration: none;
+    color:var(--text-color);
+    font-size:1.1rem;
+    font-weight:500;
+    padding:5px 0;
+    margin: 0px 30px;
+    transition:all .50s ease;
+}
+
+.navbar:hover{
+    color:var(--main-color);
+}
+
+.navbar a.active{
+    color:var(--main-color);
+}
+
+.main{
+    display:flex;
+    align-items:center;
+}
+.main a{
+    text-decoration: none;
+    margin-right: 25px;
+    margin-left:10px;
+    color:var(--text-color);
+    font-size:1.1rem;
+    font-weight:500;
+    transition: all .50s ease;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+}
+.user i{
+    color:var(--main-color);
+    font-size:28px;
+    margin-right:7px;
+}
+
+.main a:hover{
+    color:var(--main-color);
+}
+
+#menu-icon{
+    font-size:35px;
+    color:var(--text-color);
+    cursor:pointer;
+    z-index:10001;
+    display:none;
+}
+
+@media (max-width:1280px){
+    header{
+        padding:14px 2%;
+        transition: 2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin:0px 20px;
+    }
+}
+
+
+@media (max-width:1090px){
+    #menu-icon{
+        display:block;
+    }
+    .navbar{
+        position:absolute;
+        top:100%;
+        right: 2%;
+        width:270px;
+        height:40vh;
+        background:var(--main-color);
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        border-radius:10px;
+        transition:all .50s ease;
+    }
+
+     
+.navbar a{
+    display:block;
+    margin:12px 0;
+    padding:0px 25px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color:var(--text-color);
+}
+
+.navbar a.active{
+    color:var(--text-color);
+}
+.navbar.open{
+    right:2%;
+}
+}
+
+/* hover for light */
+.light:hover{
+    background-color:transparent;
+    border-radius:20px;
+    padding:10px 10px;
+    box-shadow:
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+}
+/*  */
+
+body{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-weight:bold;
+    background-color: var(--bg-color);
+}
+:root{
+    --bg-color:#222327;
+    --text-color:#fff;
+    --main-color:#29fd53;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    column-gap:5px;
+    grid-row-gap:5px;
+}
+
+.child{
+    background-color:red;
+    width:100%;
+    height:744px;
+}
+
+/* For First */
+.first{
+    background-image:url("itachi.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    grid-column-start:1;
+    grid-column-end:4;
+}
+
+
+
